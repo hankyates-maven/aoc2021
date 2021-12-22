@@ -4,9 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
-  "scripts": {
-    "puzzleOne": "node --experimental-json-modules ./puzzle-one/index.js"
-  },
   "dependencies": {
     "lodash": "^4.17.21",
     "rxjs": "^7.4.0"
