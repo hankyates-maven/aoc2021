@@ -45,13 +45,10 @@ let filterCB = mcb => position => pipe(
   ([dta, sb]) => dta.filter(d => sb ? d[position] === '1' : d[position] === '0'),
 )
 
-let recurse = (mcb, position, dta) => {
-  if (dta.length === 1) {
-    return dta[0]
-  } else {
-    return recurse(mcb, position + 1, filterCB(mcb)(position)(dta))
-  }
-}
+let recurse = (mcb, position, dta) =>
+  dta.length === 1 ?
+    dta[0] :
+    recurse(mcb, position + 1, filterCB(mcb)(position)(dta))
 
 console.log(
   'Part 2: ',
