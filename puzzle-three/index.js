@@ -54,6 +54,7 @@ let recurse = (mcb, position, dta) => {
 }
 
 console.log(
+  'Part 2: ',
   parseInt(recurse(true, 0, data), 2) * parseInt(recurse(false, 0, data), 2),
 )
 
